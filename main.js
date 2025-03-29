@@ -19,29 +19,14 @@ console.log(countOccurrences("Hello World", "W"));
 // entre un número dado por el usuario y los siguientes
 // 50 números
 
-// pseudocodigo:
-// convertir a array el input de usuario
-// crear array vacio y llenarlo con los impares (%2 != 0)
-
-// function oddNumbers(number) {
-//   let arrayOdds = [];
-
-//   for (let i = number; i < number + 50; i++) {
-//     if (i % 2 !== 0) {
-//       arrayOdds.push(i);
-//     }
-//     number++;
-//   }
-//   return arrayOdds;
-// }
-// console.log(oddNumbers(30));
 function oddNumbers(number) {
-  let arrayOdds = [];
-  while (arrayOdds.length < 50) {
+  let result = [];
+  for (let i = number; i <= number + 50; i++) {
     if (i % 2 !== 0) {
-      arrayOdds.push(number);
+      result.push(i);
     }
-    number++;
   }
+  return result;
 }
-console.log(oddNumbers(1));
+
+console.log(oddNumbers(5))
